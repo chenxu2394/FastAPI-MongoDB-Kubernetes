@@ -63,7 +63,7 @@ sequenceDiagram
 
 To test the FastAPI application with MongoDB in a Kubernetes (Kind) environment, follow these steps:
 
-1. **Clone the Repository and Navigate to the Project Directory**: 
+1. **Clone the Repository and Navigate to the Project Directory**
    
 2. **Run the Script**: Execute the provided script from the root directory of the project. This script will set up the Kubernetes cluster, build and load the Docker images, apply Kubernetes manifests, and expose a port for tests.
 
