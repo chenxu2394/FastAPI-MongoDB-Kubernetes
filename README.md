@@ -12,7 +12,8 @@ Key Features and Technologies:
 
 4. Kubernetes (Kind): Employs Kubernetes in a local development environment using Kind for orchestrating the FastAPI and MongoDB containers, showcasing skills in container orchestration, deployment, and management.
 
-```File structure
+## File Structure
+```
 .
 ├── LICENSE
 ├── README.md
@@ -26,7 +27,7 @@ Key Features and Technologies:
 │   └── persistent-volume.yaml
 └── script.sh
 ```
-
+## System Architecture Diagram
 ```mermaid
 sequenceDiagram
     participant Client as Client (e.g., Browser/Curl)
@@ -58,3 +59,25 @@ sequenceDiagram
     Note over K8s: Kubernetes (via Kind) orchestrates containers
 
 ```
+## Running the Application
+
+To test the FastAPI application with MongoDB in a Kubernetes (Kind) environment, follow these steps:
+
+1. **Clone the Repository and Navigate to the Project Directory**: 
+   
+2. **Run the Script**: Execute the provided script from the root directory of the project. This script will set up the Kubernetes cluster, build and load the Docker images, apply Kubernetes manifests, and expose a port for tests.
+
+
+   This script performs several actions:
+   - Creates a Kubernetes cluster using Kind.
+   - Builds and loads the FastAPI Docker image.
+   - Pulls the MongoDB image and loads it into the Kind cluster.
+   - Applies Kubernetes manifests for the FastAPI application and MongoDB.
+   - Waits for all pods to be in the 'Ready' state.
+   - Expose the port for FastAPI for testing purpose.
+
+   Note: Make sure that Docker, Kind, and kubectl are installed and configured on the local machine before running the script.
+
+3. **Interacting with the Application**: After successfully running the script, one can interact with the FastAPI application via tools like `curl`.
+
+4. **Cleanup**: Once it is done testing, the script will automatically clean up by deleting the images and the Kind cluster.
