@@ -13,14 +13,18 @@ Key Features and Technologies:
 4. Kubernetes (Kind): Employs Kubernetes in a local development environment using Kind for orchestrating the FastAPI and MongoDB containers, showcasing skills in container orchestration, deployment, and management.
 
 ```File structure
-./backend 
-├── Dockerfile 
-├── main.py 
-└── requirements.txt 
-./manifests 
-├── fastapi.yaml 
-├── mongo.yaml 
-└── persistent-volume.yaml 
+.
+├── LICENSE
+├── README.md
+├── backend
+│   ├── Dockerfile
+│   ├── main.py
+│   └── requirements.txt
+├── manifests
+│   ├── fastapi.yaml
+│   ├── mongo.yaml
+│   └── persistent-volume.yaml
+└── script.sh
 ```
 
 ```mermaid
